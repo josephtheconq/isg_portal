@@ -26,14 +26,14 @@ class CustomDrawer extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Icon(
-                    Icons.shopping_cart,
+                    Icons.star,
                     color: Colors.white,
                     size: 20,
                   ),
                 ),
                 const SizedBox(width: 10),
                 const Text(
-                  'Shop',
+                  'İSG portal',
                   style: TextStyle(
                     color: Color(0xFFF9F9FA),
                     fontSize: 20,
@@ -49,6 +49,11 @@ class CustomDrawer extends StatelessWidget {
             icon: Icons.dashboard_outlined,
             title: 'Dashboard',
             onTap: () => context.go('/'),
+          ),
+          _buildMenuItem(
+            icon: Icons.analytics_outlined,
+            title: 'KPI',
+            onTap: () => context.go('/kpi'),
           ),
           _buildMenuItem(
             icon: Icons.warning_amber_outlined,

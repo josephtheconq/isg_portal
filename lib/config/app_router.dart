@@ -5,6 +5,9 @@ import '../screens/kazalar_screen.dart';
 import '../screens/egitimler_screen.dart';
 import '../screens/acil_durum_protokol_screen.dart';
 import '../screens/personel_evrak_takip_screen.dart';
+import '../screens/nwg_pet.dart';
+import '../screens/adecco_pet.dart';
+import '../screens/kpi_screen.dart';
 import '../widgets/custom_drawer.dart';
 
 final GoRouter router = GoRouter(
@@ -33,6 +36,12 @@ final GoRouter router = GoRouter(
           ),
         ),
         GoRoute(
+          path: '/kpi',
+          pageBuilder: (context, state) => NoTransitionPage(
+            child: const KPIScreen(),
+          ),
+        ),
+        GoRoute(
           path: '/kazalar',
           pageBuilder: (context, state) => NoTransitionPage(
             child: const KazalarScreen(),
@@ -54,6 +63,18 @@ final GoRouter router = GoRouter(
           path: '/personel-evrak-takip',
           pageBuilder: (context, state) => NoTransitionPage(
             child: const PersonelEvrakTakipScreen(),
+          ),
+        ),
+        GoRoute(
+          path: '/nwg-pet',
+          pageBuilder: (context, state) => NoTransitionPage(
+            child: const NWGPersonelEvrakTakipScreen(),
+          ),
+        ),
+        GoRoute(
+          path: '/adecco-pet',
+          pageBuilder: (context, state) => NoTransitionPage(
+            child: const AdeccoPersonelEvrakTakipScreen(),
           ),
         ),
       ],
