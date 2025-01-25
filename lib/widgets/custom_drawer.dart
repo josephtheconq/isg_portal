@@ -152,6 +152,10 @@ class CustomDrawer extends StatelessWidget {
                     title: 'Sağlık',
                     onTap: () => context.go('/kpi/saglik'),
                   ),
+                  _buildSubMenuItem(
+                    title: 'Misafir Atama',
+                    onTap: () => context.go('/kpi/misafir-atama'),
+                  ),
                 ],
               ),
             ],

@@ -10,6 +10,7 @@ import '../screens/kpi_screen.dart';
 import '../screens/toolbox_screen.dart';
 import '../screens/tool_detail_screen.dart';
 import '../screens/nwg_pet.dart';
+import '../screens/misafir_atama_screen.dart';
 import '../models/tool.dart';
 import '../widgets/custom_drawer.dart';
 
@@ -79,6 +80,12 @@ final GoRouter router = GoRouter(
           path: '/kpi/genel',
           pageBuilder: (context, state) => NoTransitionPage(
             child: const KPIScreen(),
+          ),
+        ),
+        GoRoute(
+          path: '/kpi/misafir-atama',
+          pageBuilder: (context, state) => NoTransitionPage(
+            child: const MisafirAtamaScreen(),
           ),
         ),
         GoRoute(
