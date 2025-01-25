@@ -11,6 +11,7 @@ import '../screens/toolbox_screen.dart';
 import '../screens/tool_detail_screen.dart';
 import '../screens/nwg_pet.dart';
 import '../screens/misafir_atama_screen.dart';
+import '../screens/tedarikci_dokuman_screen.dart';
 import '../models/tool.dart';
 import '../widgets/custom_drawer.dart';
 
@@ -86,6 +87,12 @@ final GoRouter router = GoRouter(
           path: '/kpi/misafir-atama',
           pageBuilder: (context, state) => NoTransitionPage(
             child: const MisafirAtamaScreen(),
+          ),
+        ),
+        GoRoute(
+          path: '/kpi/tedarikci-dokuman',
+          pageBuilder: (context, state) => NoTransitionPage(
+            child: const TedarikciDokumanScreen(),
           ),
         ),
         GoRoute(
