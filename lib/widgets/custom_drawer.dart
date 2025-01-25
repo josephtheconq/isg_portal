@@ -74,6 +74,18 @@ class CustomDrawer extends StatelessWidget {
                     title: 'Sertifikalar',
                     onTap: () => context.go('/egitimler/sertifikalar'),
                   ),
+                  _buildSubMenuItem(
+                    title: 'SDS Eğitimler',
+                    onTap: () => context.go('/egitimler/sds'),
+                  ),
+                  _buildSubMenuItem(
+                    title: 'Misafir Atama',
+                    onTap: () => context.go('/kpi/misafir-atama'),
+                  ),
+                  _buildSubMenuItem(
+                    title: 'Toolbox',
+                    onTap: () => context.go('/kpi/toolbox'),
+                  ),
                 ],
               ),
               _buildExpandableMenuItem(
@@ -87,10 +99,6 @@ class CustomDrawer extends StatelessWidget {
                         title: 'Personel Listesi',
                         onTap: () => context.go('/personel-evrak-takip/adecco'),
                       ),
-                      _buildSubMenuItem(
-                        title: 'Acil Durum Protokolü',
-                        onTap: () => context.go('/acil-durum-protokol'),
-                      ),
                     ],
                   ),
                   _buildExpandableSubMenuItem(
@@ -99,10 +107,6 @@ class CustomDrawer extends StatelessWidget {
                       _buildSubMenuItem(
                         title: 'Personel Listesi',
                         onTap: () => context.go('/personel-evrak-takip/nwg'),
-                      ),
-                      _buildSubMenuItem(
-                        title: 'Acil Durum Protokolü',
-                        onTap: () => context.go('/acil-durum-protokol'),
                       ),
                     ],
                   ),
@@ -145,26 +149,29 @@ class CustomDrawer extends StatelessWidget {
                     onTap: () => context.go('/kpi/uyari'),
                   ),
                   _buildSubMenuItem(
-                    title: 'Toolbox',
-                    onTap: () => context.go('/kpi/toolbox'),
-                  ),
-                  _buildSubMenuItem(
                     title: 'Sağlık',
                     onTap: () => context.go('/kpi/saglik'),
                   ),
+                ],
+              ),
+              _buildExpandableMenuItem(
+                icon: Icons.emergency_outlined,
+                title: 'Acil Durum Ekipleri ve Çalışan Temsilcisi',
+                children: [
                   _buildSubMenuItem(
-                    title: 'Rules',
+                    title: 'Acil Durum Protokolü',
+                    onTap: () => context.go('/acil-durum-protokol'),
+                  ),
+                  _buildSubMenuItem(
+                    title: 'Çalışan Temsilcisi',
                     onTap: () => context.go('/kpi/rules'),
                   ),
-                  _buildSubMenuItem(
-                    title: 'Misafir Atama',
-                    onTap: () => context.go('/kpi/misafir-atama'),
-                  ),
-                  _buildSubMenuItem(
-                    title: 'Tedarikçi Doküman',
-                    onTap: () => context.go('/kpi/tedarikci-dokuman'),
-                  ),
                 ],
+              ),
+              _buildMenuItem(
+                icon: Icons.description_outlined,
+                title: 'Tedarikçi Doküman',
+                onTap: () => context.go('/kpi/tedarikci-dokuman'),
               ),
             ],
           ),
