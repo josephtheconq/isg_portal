@@ -168,7 +168,7 @@ class TedarikciDokumanScreen extends StatelessWidget {
               ),
               // Action Buttons
               Padding(
-                padding: const EdgeInsets.only(right: 150),
+                padding: const EdgeInsets.only(right: 530),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [

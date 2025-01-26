@@ -63,16 +63,20 @@ class CustomDrawer extends StatelessWidget {
                 title: 'Eğitimler',
                 children: [
                   _buildSubMenuItem(
-                    title: 'Tüm Eğitimler',
+                    title: 'Genel Konular',
                     onTap: () => context.go('/egitimler'),
                   ),
                   _buildSubMenuItem(
-                    title: 'Eğitim Takvimi',
-                    onTap: () => context.go('/egitimler/takvim'),
+                    title: 'Sağlık Konuları',
+                    onTap: () => context.go('/egitimler/saglik'),
                   ),
                   _buildSubMenuItem(
-                    title: 'Sertifikalar',
-                    onTap: () => context.go('/egitimler/sertifikalar'),
+                    title: 'Teknik Konular',
+                    onTap: () => context.go('/egitimler/teknik'),
+                  ),
+                  _buildSubMenuItem(
+                    title: 'Özel Eğitimler',
+                    onTap: () => context.go('/egitimler/ozel'),
                   ),
                   _buildSubMenuItem(
                     title: 'SDS Eğitimler',
